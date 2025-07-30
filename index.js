@@ -20,7 +20,7 @@ app.post('/send-bnb', async (req, res) => {
   try {
     const tx = await wallet.sendTransaction({
       to: recipient,
-      value: ethers.utils.parseEther(amount),
+    value: ethers.utils.parseEther("0.0005"),
     });
 
     await tx.wait();
